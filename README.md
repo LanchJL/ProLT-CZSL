@@ -1,15 +1,19 @@
 # Revealing the Proximate Long-Tail Distribution in Compositional Zero-Shot Learning
 
-Codes of Revealing the Proximate Long-Tail Distribution in Compositional Zero-Shot Learning
+Codes of Revealing the Proximate Long-Tail Distribution in Compositional Zero-Shot Learning (AAAI2024)
 
 ## Prepare
 ```shell
 $ cd repository
 $ pip install -r requirements.txt
 ```
-Datasets can be download via utils/download_data.sh according to [1].
-
-Or it can be found in CGE[1] https://github.com/ExplainableML/czsl.
+## Datasets
+The splits of dataset and its attributes can be found in utils/download_data.sh, the complete installation process can be found in [CGE&CompCos](https://github.com/ExplainableML/czsl).
+You can download the datasets using
+```shell
+bash utils/download_data.sh
+```
+And you can set the --DATA_FOLDER in flag.py as your dataset path.
 
 ## Training
 For training our model, you can run
@@ -23,7 +27,5 @@ If you want to test based on an existing weights file, please set the correspond
 ```shell
 python test.py --config [config].yml
 ```
-
-
-
-[1] Naeem M F, Xian Y, Tombari F, et al. Learning graph embeddings for compositional zero-shot learning[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021: 953-962.
+## Acknowledgements
+Our overall code is built on top of [CGE&CompCos](https://github.com/ExplainableML/czsl), and we sincerely appreciate the great help this work has given us.
